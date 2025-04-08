@@ -1,0 +1,5 @@
+What Does Ducking Exceptions Mean?
+Ducking an exception means you don’t handle it immediately where it happens. Instead, you let it move up to a higher part of the program. For example, in the Kodnest app, if there's a network problem when connecting to a server, you might not handle it in the code that makes the request. Instead, you let the higher-level part of the app deal with it.
+
+Ducking exceptions means not handling an error immediately where it occurs. Instead, the exception is passed up to a higher level in the program using the throws keyword.
+---------------------------------------------

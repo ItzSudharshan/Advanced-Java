@@ -1,0 +1,11 @@
+What are Checked and Unchecked Exceptions?
+In Java, exceptions are divided into two main types: checked exceptions and unchecked exceptions. 
+-------------------
+Interviewer: Can you explain the difference between checked and unchecked exceptions in Java using an analogy?
+
+Ideal Answer: Checked exceptions in Java are like the error messages you get when a YouTube video is not available in your country. These are predictable issues that the program must handle using try-catch blocks to inform the user about the problem. On the other hand, unchecked exceptions are like unexpected crashes on YouTube, often due to bugs or programming mistakes. These do not require explicit handling but fixing them improves the overall stability of the application.
+------------------
+Checked Exceptions: Predictable issues that need to be handled, like a restricted YouTube video. Always use try-catch blocks to manage them properly.
+
+Unchecked Exceptions: Unexpected issues, like a bug causing YouTube to crash. Fix the code to prevent these errors, but handle them where possible to improve stability.
+-------------------

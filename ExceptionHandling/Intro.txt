@@ -1,0 +1,37 @@
+What is Exception Handling ?
+Exception handling is a mechanism used in programming to manage errors and other exceptional events, allowing the normal flow of a program to continue or terminate gracefully. It typically involves using constructs like try, except, and finally to catch exceptions, handle them appropriately, and ensure resources are released properly.
+----------------------------------------------------------------
+Type of Exceptions 
+
+There are 5 different types of exceptions:
+1. Null Pointer Exceptions
+This is a very common one. A NullPointerException (NPE) occurs when you try to use an object that hasn't been initialized yet—kind of like trying to use a car that doesn’t have an engine! For example:
+
+String name = null;
+System.out.println(name.length()); // Throws NullPointerException
+
+2. Array Index Out of Bounds
+Arrays in Java have fixed lengths, just like the number of seats in a train. If you try to access an index outside that range, Java will throw an ArrayIndexOutOfBoundsException. It’s like trying to sit in a seat that isn't there.
+
+int[] numbers = {1, 2, 3};
+System.out.println(numbers[3]); // Throws ArrayIndexOutOfBoundsException
+
+3. Arithmetic Exceptions
+Math is great, but not every operation is allowed—even in Java. If you try to divide by zero, for example, you'll get an ArithmeticException.
+
+int result = 10 / 0; // Throws ArithmeticException: / by zero
+
+4. Class Cast Exceptions
+Casting in Java can be useful, but it can lead to problems if you're not careful. When you try to cast an object to a class it doesn’t belong to, you’ll get a ClassCastException.
+
+Object obj = new Integer(100);
+String str = (String) obj; // Throws ClassCastException
+
+5. Number Format Exceptions
+Have you ever tried converting a word into a number? Java will throw a NumberFormatException if you try to turn non-numeric text into a number.
+
+String value = "abc";
+int number = Integer.parseInt(value); // Throws NumberFormatException
+------------------------------------------------------------
+Generic Catch Blocks: In Java, these are used to catch any exceptions that weren't specifically caught by earlier catch blocks. They act as a safety net for unexpected errors.
+-------------------------------------------------------------

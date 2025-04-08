@@ -1,0 +1,21 @@
+Rules for Handling Problems in Inherited Classes
+Rule 1: The Child Class Can't Throw Bigger Problems Than the Parent Class
+When a child class inherits a method from a parent class, the types of problems (exceptions) it can throw must be smaller or the same as the parent's method. You can’t make the child class throw bigger, more general problems.
+-------------
+What is a Stack Trace?
+A stack trace is like a map showing the path your code took before hitting an error. It lists all the methods that were called, starting from the method called first, all the way to where the error happened. Think of it like looking at a video timeline—each part shows exactly what was happening at that moment.
+
+class NetflixFeature {
+    void skipIntro() {
+        try {
+            int[] episodes = new int[5];
+            System.out.println(episodes[10]); // This line will throw an ArrayIndexOutOfBoundsException
+        } catch (Exception e) {
+            e.printStackTrace(); // Prints the stack trace to show where the error happened
+        }
+    }
+}
+Output: ->  java.lang.ArrayIndexOutOfBoundsException: 10
+	        at NetflixFeature.skipIntro(NetflixFeature.java:6)
+	        at Main.main(Main.java:3)
+-------------

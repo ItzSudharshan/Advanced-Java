@@ -1,0 +1,10 @@
+Interviewer: Can you explain how Java handles errors and exceptions?
+
+Ideal Answer: Java handles errors and exceptions through a hierarchy of classes. At the top of this hierarchy is Throwable, the superclass for all error and exception classes. Throwable has two primary subclasses: Error and Exception. Exception is further divided into checked exceptions, which must be explicitly caught or declared, and unchecked exceptions, represented by RuntimeException. Checked exceptions are used for recoverable conditions, while unchecked exceptions are typically used for programming errors
+---------------------------------
+Interviewer: What is the role of the Throwable class in Java's error-handling mechanism?
+Ideal Answer: The Throwable class is the superclass for all error and exception classes in Java. It serves as the root of the error-handling hierarchy, encapsulating common behavior for all types of errors and exceptions. However, in practice, developers rarely interact directly with Throwable; instead, they work with its subclasses, Error and Exception\
+---------------------------------
+Interviewer: How do checked and unchecked exceptions differ in Java?
+Ideal Answer: Checked exceptions, represented by the Exception class (excluding RuntimeException), must be explicitly caught or declared in the method signature using the throws keyword. They are typically used for recoverable conditions, such as I/O errors or network issues. Unchecked exceptions, represented by the RuntimeException class, do not need to be explicitly caught or declared. These exceptions usually indicate programming errors, such as null pointer dereferences or arithmetic errors.
+----------------------------------

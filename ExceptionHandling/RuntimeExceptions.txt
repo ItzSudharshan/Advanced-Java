@@ -1,0 +1,45 @@
+What Are Runtime Errors?
+Runtime errors happen when your program is running. Unlike compile-time errors, which get caught before the program even starts, runtime errors only show up once your code is in action.
+-----------
+What is an Exception?
+In Java, an exception is like a warning that disrupts the normal flow of your program, but it’s also a chance to handle the problem. It’s your code's way of saying, "Hey, there’s an issue, but if we work together, we can fix it!"
+----------------------
+Types of Exceptions:
+Checked Exceptions: Imagine you’re attending a live Kodnest class and the team lets you know in advance that there might be a connection problem. A checked exception works the same way—it warns you before you even start running your code. You need to handle it with try-catch blocks or declare it in your method signature. For example, IOException when working with files.
+
+Unchecked Exceptions: These are like unexpected disruptions during your self-paced course—maybe your internet suddenly cuts out. Examples include NullPointerException or ArrayIndexOutOfBoundsException. Unlike checked exceptions, the compiler doesn’t force you to handle them, but you should still be prepared.
+---------------------------------
+What is an Error?
+An Error in Java represents a more serious issue, typically caused by the environment in which the application is running, rather than by problems in the code itself. Errors are often fatal and cannot be recovered from, unlike exceptions.
+---------------------------------
+Types of Error:-> 
+
+1)Out of Memory: It’s like trying to keep too many tabs open in your browser, and eventually, your computer can’t handle it. If your program tries to use more memory than is available, you’ll get an OutOfMemoryError.
+import java.util.ArrayList;
+public class OutOfMemoryExample {
+    public static void main(String[] args) {
+        ArrayList<int[]> list = new ArrayList<>();
+        while (true) {
+            list.add(new int[1000000]); // Causes OutOfMemoryError
+        }
+    }
+}
+
+2) Stack Overflow: Imagine you have a set of mirrors facing each other, creating an endless tunnel of reflections. This is similar to what happens in your code when a method keeps calling itself with no exit—it results in a StackOverflowError.
+public class StackOverflowExample {
+    public static void recursiveMethod() {
+        recursiveMethod(); // Causes StackOverflowError
+    }
+    public static void main(String[] args) {
+        recursiveMethod();
+    }
+}
+
+3) Linkage Error: A LinkageError happens when:
+Your program is compiled successfully ✅
+But when you run it, Java cannot find a class or method it was expecting ❌
+Why? Because after compiling, you may have:
+Deleted a method or class
+Changed the method’s name or parameters
+Used an old .class file that doesn’t match the current cod
+---------------------------------------------------------------------------------------------------------------------------

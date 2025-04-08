@@ -1,0 +1,14 @@
+What is a Custom Exception?
+A custom exception is an error type that you create yourself. Java already has many built-in exceptions, like NullPointerException or ArrayIndexOutOfBoundsException, but sometimes they aren't specific enough. When you need to handle a unique situation that doesn’t match any of the built-in errors, you can create your own custom exception. This makes your code easier to understand and maintain, especially for future developers who need to troubleshoot or extend the project. Custom exceptions provide clear error messages that describe exactly what went wrong, improving both readability and long-term maintainability
+-------------------------
+How to Create a Custom Exception
+Creating a custom exception is straightforward. You simply extend the Exception or RuntimeException class, depending on whether you want the error to be checked or unchecked.
+
+Checked exceptions (Exception) must be handled using try-catch blocks.
+
+Unchecked exceptions (RuntimeException) do not require explicit handling, making them suitable for programming errors that shouldn't be caught every time
+--------------
+Custom Exceptions: Create your own exceptions when the built-in ones aren’t specific enough.
+When to Use: Use custom exceptions for unique situations, better clarity, and easier debugging.
+Clear Messages: Adding specific and clear messages helps users and developers understand the error and fix it faster.
+----------------------

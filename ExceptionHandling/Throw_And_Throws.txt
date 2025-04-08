@@ -1,0 +1,29 @@
+throw: Manually raises an exception.
+throws: Alerts the caller that a method might throw an exception
+-------------------
+Interviewer: What is the purpose of the throws keyword in Java?
+
+Ideal Answer: The throws keyword in Java is used in a method signature to indicate that the method may throw certain exceptions. This is a way of informing the caller of the method that it should be prepared to handle these exceptions. For example, if a method performs a division operation and may encounter an ArithmeticException, it can declare this using throws ArithmeticException. This ensures that the caller is aware of the potential exception and can handle it using a try-catch block.
+---------------------
+Interviewer: What is the primary difference between the throw and throws keywords in Java?
+
+Ideal Answer: The primary difference between the throw and throws keywords in Java is their purpose and usage. The throw keyword is used to explicitly create an exception in the program, stopping the process immediately when an error is detected. On the other hand, the throws keyword is used in a method signature to declare that a method might cause an exception, thereby giving a heads-up to the caller to handle the potential exception.
+-------------------------
+Key Differences Between throw and throws
+Purpose:
+throw is
+used to create or rethrow an exception.
+throws is used to declare that a method might cause an exception.
+
+Where They Are Used:
+throw is used inside the method body to trigger an exception.
+throws is used in the method signature to warn callers about possible exceptions.
+
+Number:
+You can use throw to create or rethrow only one specific exception at a time.
+You can declare multiple exceptions with throws in a method.
+
+When to Use Them:
+Use throw when you know something is wrong and need to stop the code immediately.
+Use throws when you want the caller of the method to handle the issue.
+------------------------------
