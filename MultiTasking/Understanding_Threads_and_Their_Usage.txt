@@ -1,0 +1,22 @@
+What is a Thread: Definition and Role in Java
+A thread is the smallest unit that runs by itself. It helps a program do multiple things at the same time. In Java, threads help run different parts of a program at once, making better use of system resources.
+-----------------
+Differences between Processes and Threads
+Definition:
+
+Process: A process is an independent program running on a computer. Each process has its own memory space and system resources. For example, running Swiggy and Netflix at the same time involves two different processes, each managing its own resources.
+Thread: A thread, on the other hand, is a smaller unit within a process. Threads within the same process share resources like memory. For example, in Netflix, one thread might handle video playback while another manages subtitles.
+
+Memory and Resource Usage:
+Process: Each process has its own memory space, which means that running multiple processes can use up a lot of memory.
+Thread: Threads share the memory space of their parent process, making them more memory-efficient compared to running separate processes.
+
+Communication:
+Process: Communication between processes is harder because they are independent and do not share memory.
+Thread: Threads within the same process can easily share data and communicate because they use the same memory space.
+
+Overhead:
+Process: Creating a new process involves more overhead since each process needs its own memory and resources.
+Thread: Creating a new thread is lighter because it uses the existing resources of the process
+--------------------------------
+

@@ -1,0 +1,31 @@
+Whats a Thread ?
+A thread in Java is a lightweight unit of a process that allows a program to perform multiple tasks concurrently.
+----------------------------
+The Different States of a Thread
+New
+
+Runnable
+
+Running
+
+Blocked
+
+Waiting
+
+Timed Waiting
+
+Terminated
+----------------------------
+Interviewer: Can you explain how interrupting a thread works in Java?
+
+Ideal Answer: In Java, interrupting a thread is done using the interrupt() method. This method sets an internal flag called the interrupted status on the thread. The thread then checks this flag periodically to decide if it should stop its work. If the thread is in a blocking operation like sleeping or waiting for input, calling interrupt() will cause an InterruptedException to be thrown, allowing the thread to catch this exception and exit gracefully.
+--------------------------------
+Summary
+Interrupting a thread is like politely asking it to stop when it's convenient.
+
+Use interrupt() to signal a thread to stop its work.
+
+The thread must handle this interruption by checking its status or catching InterruptedException.
+
+This allows for a safe and graceful shutdown of threads, keeping your program responsive and efficient.
+--------------------------------

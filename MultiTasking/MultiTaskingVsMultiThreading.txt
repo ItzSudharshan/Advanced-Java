@@ -1,0 +1,19 @@
+Multitasking: Multitasking means running multiple programs at the same time. For example, using Swiggy, Paytm, and Netflix on your phone simultaneously. Each program is independent and uses its own memory.
+
+Multithreading: Multithreading means running multiple smaller tasks (threads) within the same program. These threads work independently, which helps finish larger tasks faster. It's like Netflix streaming a show while also updating your recommendations—all at the same time.
+------------------------------------------
+Level of Execution:
+Multitasking: Works at the level of the operating system. It manages multiple processes, ensuring that all running programs have CPU time to perform their tasks.
+
+Multithreading: Works at the program level. It allows different parts of the same program to execute simultaneously, leading to faster and more efficient execution.
+-------------------------
+Resource Usage:
+Multitasking: In multitasking, each process needs its own memory and CPU resources. It's like having multiple Swiggy delivery drivers, each with their own bike.
+
+Multithreading: In multithreading, threads share the memory and resources of their parent process. This saves memory, like having multiple chefs in the same kitchen, all working on different dishes but using the same ingredients.
+----------------------------
+Speed and Efficiency:
+Multitasking: Generally slower compared to multithreading since processes require more overhead to manage.
+
+Multithreading: Faster because threads share resources and have lower overhead compared to processes
+---------------------------

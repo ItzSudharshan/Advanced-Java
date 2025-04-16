@@ -1,0 +1,30 @@
+Multithreading is a concept in Java that allows a program to handle multiple tasks at the same time, making it faster and smoother.
+------------------------------------
+Summary
+Multithreading helps run many tasks at once, making the application faster and smoother.
+Examples include downloading multiple files, handling multiple user requests, and running background tasks while keeping the main app responsive.
+For interviews, understand the basic concepts, practice coding examples, and be ready to explain the benefits of multithreading in simple words.
+--------------------------------
+Interviewer: Can you explain what multithreading is and why it is important in Java?
+Ideal Answer: Multithreading in Java is a concept that allows a program to handle multiple tasks simultaneously. This makes the program faster and more efficient, as different parts of the program can run concurrently without waiting for each other. For instance, it's like Swiggy handling multiple food orders at once, ensuring quick delivery without delay. Multithreading improves the responsiveness and performance of applications by making full use of the CPU and running tasks in parallel.
+--------------------------------
+Interviewer: What is synchronization in multithreading, and why is it necessary?
+Ideal Answer: Synchronization in multithreading is a mechanism that ensures that multiple threads can safely access shared resources without causing data inconsistency or unexpected behavior. It is necessary because when threads share resources, there is a risk of interference and conflicts. Synchronization prevents these issues by controlling the access to shared resources, making sure that only one thread can access the resource at a time.
+-------------------------------------------
+Interviewer: What are some common methods to create threads in Java?
+Ideal Answer: In Java, threads can be created using two common methods: extending the Thread class and implementing the Runnable interface. Extending the Thread class involves creating a new class that inherits from Thread and overriding the run method. Implementing the Runnable interface involves creating a class that implements Runnable and passing an instance of this class to a Thread object. Both methods allow you to define the code that runs in the new thread.
+------------------------------------------
+Interviewer: What is the purpose of the sleep method in Java multithreading?
+Ideal Answer: The sleep method in Java multithreading is used to pause the execution of the current thread for a specified period. This method takes a time duration in milliseconds as an argument and puts the thread into a sleeping state. It is useful for simulating delays, throttling the execution speed, and coordinating the timing of multiple threads
+---------------------------------------
+Interviewer: How can you achieve thread communication in Java?
+Ideal Answer: Thread communication in Java can be achieved using methods like wait(), notify(), and notifyAll(). These methods are used in synchronized blocks to coordinate the execution of threads. The wait() method causes a thread to wait until another thread calls notify() or notifyAll() on the same object. The notify() method wakes up a single waiting thread, while notifyAll() wakes up all waiting threads. This allows threads to communicate and coordinate their actions effectively
+--------------------------------------
+Interviewer: Can you explain what a deadlock is in the context of Java multithreading?
+Ideal Answer: A deadlock in Java multithreading occurs when two or more threads are blocked forever, waiting for each other to release resources. This happens when each thread holds a resource and waits for another resource held by another thread, creating a cycle of dependencies with no thread able to proceed. Deadlocks can be prevented by avoiding circular dependencies, using timeout mechanisms, and employing deadlock detection algorithms.
+--------------------------------------
+Summary
+Multithreading helps run many tasks at once, making the application faster and smoother.
+Examples include downloading multiple files, handling multiple user requests, and running background tasks while keeping the main app responsive.
+For interviews, understand the basic concepts, practice coding examples, and be ready to explain the benefits of multithreading in simple words.
+--------------------------------------

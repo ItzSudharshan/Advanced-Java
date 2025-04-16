@@ -1,0 +1,48 @@
+Race Condition: A race condition occurs when two or more threads try to read and write shared data at the same time, and the final outcome depends on which thread finishes first. This can lead to unpredictable results and errors.
+
+Real-World Analogy: Think of two people trying to edit the same document at the same time. They both make changes and save the file, leading to data loss as one person's changes might overwrite the other's.
+-----------------------------------
+Simple Code Example:
+
+int counter = 0;
+
+public void increment() {
+    counter = counter + 1;
+}
+If two threads run increment() at the same time, the counter may not increment correctly due to race conditions.
+-----------------------------------
+How to Prevent Race Conditions
+To prevent race conditions, we need to control how threads access shared resources. This is called synchronization.
+
+Using Synchronization Mechanisms
+Synchronized Blocks or Methods:
+
+In Java, you can use the synchronized keyword to ensure that only one thread can access a block of code at a time.
+
+public synchronized void increment() {
+    counter = counter + 1;
+}
+Only one thread can execute increment() at a time.
+
+Other threads wait their turn.
+------------------------------------------
+Without Synchronization (Race Condition):
+
+public class Counter {
+    int counter = 0;
+
+    public void increment() {
+        counter = counter + 1;
+    }
+}
+With Synchronization (No Race Condition):
+
+public class Counter {
+    int counter = 0;
+
+    public synchronized void increment() {
+        counter = counter + 1;
+    }
+}
+Now, if two threads try to increment the counter at the same time, one will wait until the other finishes, ensuring the counter increases correctly.
+------------------------------

@@ -1,0 +1,27 @@
+Interviewer: Why do we need the main thread in Java?
+Ideal Answer: In Java, the main thread is essential because it acts as the starting point for all Java programs. It is responsible for executing the code within the main() method, ensuring the program's tasks are processed sequentially and efficiently. The main thread coordinates all tasks and controls the flow of the program from start to finish.
+-----------------------------
+Why Does the JVM Create the Main Thread?
+The JVM creates the main thread as the starting point of every Java application. When a Java program runs, the JVM allocates memory segments for the program, including the stack segment, which stores method calls. The main thread executes the code in the main() method, which resides in the main stack of the stack segment.
+
+Once the JVM initiates the main thread, it hands over control to the thread scheduler. The thread scheduler determines when the main thread gets to execute based on the current CPU availability and priority. The main thread runs until it completes the instructions in the main() method or is terminated. If other threads are created within the main() method, they are also managed by the thread scheduler. But in applications with just the main thread, it ensures all tasks are executed sequentially from top to bottom within the main() method.
+-----------------------------------
+Default priority of the main thread in Java - 5
+The valid range of thread priorities in Java - 1 to 10
+------------------------------------------------------
+Interviewer: What is the Runnable interface in Java and how does it relate to multithreading?
+
+Ideal Answer: The Runnable interface in Java is used for creating tasks that can run concurrently in separate threads. It allows a class to perform multithreading without extending the Thread class, providing more flexibility. By implementing the Runnable interface, you can define the task to be executed in the run() method and then pass an instance of the class to a Thread object to start the execution. This approach is similar to using different features of an application simultaneously, such as coding, watching live classes, and chatting with a mentor, without being limited by a single class extension.
+--------------------------------------------------------
+Interviewer: What is the difference between a thread and a process?
+
+Ideal Answer: A thread is a lightweight unit of execution within a process, sharing the same memory space and resources as other threads in the same process. A process, on the other hand, is a heavier unit of execution with its own memory space and resources. Threads within a process can communicate and share data more easily, while processes are isolated from each other and require inter-process communication mechanisms to share data.
+------------------------------------------------------------
+Interviewer: Can you explain the concept of thread priority and how it affects thread scheduling? (Continued)
+
+Ideal Answer: Thread priority is an integer value that indicates the relative importance of a thread compared to other threads. Higher priority threads are more likely to be scheduled for execution before lower priority threads. In Java, you can set thread priority using the setPriority() method, with values ranging from Thread.MIN_PRIORITY (1) to Thread.MAX_PRIORITY (10). However, thread priority should be used cautiously, as it may not guarantee execution order and can vary across different JVM implementations.
+---------------------------------------------------------------
+Interviewer: What is the significance of the join() method in Java threads?
+
+Ideal Answer: The join() method in Java threads allows one thread to wait for the completion of another thread. When a thread calls the join() method on another thread, it pauses its execution until the target thread finishes. This is useful for ensuring that certain tasks are completed before proceeding with subsequent operations. For example, you might use join() to wait for a background computation to complete before processing its results.
+----------------------------------------------------------------

@@ -1,0 +1,13 @@
+Key Differences
+1. Inheritance Limitation
+Thread Class: If you extend Thread, your class cannot extend any other class. This limits your options because Java does not support multiple inheritance.
+Runnable Interface: When you implement Runnable, you can extend any other class, which provides more flexibility in design.
+
+2. Resource Sharing
+Thread Class: Each thread has its own separate memory, which can make sharing resources between threads more challenging.
+Runnable Interface: Multiple threads can share the same Runnable object, making resource sharing easier and more efficient. For example, multiple threads accessing the same file or database can use the same Runnable object to ensure smooth and consistent updates. It’s like Kodnest allowing multiple students to work with the same mentor simultaneously—more teamwork, less redundancy.
+
+3. Code Structure and Design
+Thread Class: Extending Thread can lead to tightly coupled code, meaning that different parts of the code depend too much on each other, which makes it harder to maintain and modify in complex projects.
+Runnable Interface: Implementing Runnable encourages cleaner code separation, making it easier to reuse and maintain. This is similar to how Kodnest organizes its sections—courses, practice, placement—keeping everything modular and easy to navigate.
+------------------------------------------------------

@@ -1,0 +1,15 @@
+Interviewer: What are daemon threads, and how are they different from regular user threads?
+
+Ideal Answer: Daemon threads are background threads that provide services to user threads. They perform tasks like garbage collection, sending notifications, or monitoring system events. Unlike user threads, daemon threads do not prevent the program from ending. When all user threads finish their work, the daemon threads automatically stop. User threads, on the other hand, perform the main tasks of the application and keep the program running until they finish their execution.
+---------------------------
+Use Cases of Daemon Threads
+Daemon threads are useful for tasks that should run in the background without blocking the main program from exiting. Here are some common use cases:
+
+Garbage Collection: In Java, the garbage collector is a daemon thread that frees up memory by removing unused objects.
+
+Monitoring System Resources: Daemon threads can monitor CPU usage, memory consumption, or other system metrics.
+
+Sending Notifications: Like job alerts in your job search app, daemon threads can send notifications or reminders without user intervention.
+
+Background Tasks: Performing regular checks, updates, or maintenance tasks while the main application is running
+------------------------------

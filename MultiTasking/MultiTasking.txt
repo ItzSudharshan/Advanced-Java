@@ -1,0 +1,7 @@
+Multitasking in programming allows a system to handle multiple tasks at the same time, similar to how we perform various activities simultaneously in real life.
+--------------------------------------
+Key Points
+Multitasking allows multiple tasks to run simultaneously.
+Enhances user experience by making applications smoother.
+Java supports multitasking to perform different operations at the same time.
+---------------------------------------

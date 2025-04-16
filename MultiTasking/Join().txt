@@ -1,0 +1,2 @@
+join() Method: In programming, join() ensures that a thread completes its execution before the main thread continues. 
+-------------------------------
