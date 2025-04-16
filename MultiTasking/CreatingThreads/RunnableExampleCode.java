@@ -1,3 +1,4 @@
+package CreatingThreads;
 class VideoThread implements Runnable{
 	public void run() {
 		String t = Thread.currentThread().getName();
