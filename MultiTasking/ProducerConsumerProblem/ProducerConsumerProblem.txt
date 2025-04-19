@@ -1,0 +1,23 @@
+Producer-Consumer Problem: It’s a classic synchronization problem where one thread (producer) generates data and another thread (consumer) uses that data. The challenge is to ensure both threads operate without conflicts or waste.
+---------------------------------
+Key Points
+Producers: Create data and place it in a shared resource.
+Consumers: Take data from the shared resource and use it.
+Issues without Coordination:
+Data Loss: Overwriting data before it’s read.
+Data Corruption: Multiple threads changing data simultaneously.
+Deadlock: Threads waiting forever for each other.
+Java Methods to Solve:
+wait(): Pauses the thread until notified.
+notify(): Wakes up a single waiting thread.
+notifyAll(): Wakes up all waiting threads
+-----------------------------------
+Why It’s Useful
+The Producer-Consumer Problem is crucial in multi-threaded programming to avoid data inconsistency, ensure efficient resource use, and prevent program freezes.
+--------------------------------
+Summary
+The Producer-Consumer Problem involves managing producer and consumer threads to ensure smooth data production and consumption without conflicts. Using synchronization methods like wait(), notify(), and notifyAll() helps coordinate thread actions, preventing issues like data loss and deadlocks. This concept is vital for writing efficient, multi-threaded programs.
+--------------------------
+What Is a Race Condition?
+A race condition occurs when two or more threads access shared data at the same time, and the final result depends on who finishes first, like multiple users trying to update the same file simultaneously. It's like two people trying to write on the same blackboard simultaneously—the writing gets jumbled and unreadable.
+------------------------

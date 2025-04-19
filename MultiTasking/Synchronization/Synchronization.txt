@@ -1,0 +1,22 @@
+Synchronization is a mechanism that controls the access of multiple threads to shared resources, ensuring only one thread can access the resource at a time
+-----------------------
+Why It’s Useful
+Synchronization prevents issues like race conditions, ensuring that threads work together smoothly without causing problems. It's essential for maintaining data integrity in multithreaded applications.
+---------------------
+public class SharedDocument {
+    private String content = "";
+
+    public synchronized void editContent(String newText) {
+        content += newText;
+    }
+
+    public synchronized String readContent() {
+        return content;
+    }
+}
+In this example:
+
+The editContent and readContent methods are synchronized.
+
+If one thread (person) is editing the document, no other thread can edit or read until the first thread finishes.
+--------------------

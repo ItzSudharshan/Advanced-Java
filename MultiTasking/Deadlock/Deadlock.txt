@@ -1,0 +1,41 @@
+What Is a Deadlock?
+A deadlock is a situation in programming where a set of threads are blocked because each thread is holding a resource and waiting for another resource held by another thread. None of the threads can proceed because the resources they need are locked by others.
+-------------------
+How Does a Deadlock Occur?
+Deadlocks typically occur in multithreaded applications when the following four conditions are met simultaneously:
+
+Mutual Exclusion: Resources involved are non-shareable. Only one thread can use a resource at a time.
+
+Hold and Wait: Threads are holding onto resources while waiting for other resources.
+
+No Preemption: A resource cannot be forcibly taken away from a thread; it must be released voluntarily.
+
+Circular Wait: A circular chain of threads exists, where each thread holds a resource that the next thread in the chain needs
+-----------------
+Example Scenario
+Let's look at an example that students might relate to.
+
+Situation in the College Library:
+
+There are two popular books in the library: Book A and Book B.
+
+Student 1 needs both Book A and Book B to complete an assignment.
+
+Student 2 also needs both Book A and Book B for their assignment.
+
+What Happens:
+
+Student 1 picks up Book A.
+
+Student 2 picks up Book B.
+
+Student 1 needs Book B to proceed but finds that it's with Student 2.
+
+Student 2 needs Book A to proceed but finds that it's with Student 1.
+
+Both students wait for the other to release the book they need.
+
+Neither student can continue, and both are stuck waiting forever.
+
+This is a deadlock situation.
+------------------
