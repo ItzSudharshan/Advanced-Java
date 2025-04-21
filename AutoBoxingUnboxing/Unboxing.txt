@@ -1,0 +1,27 @@
+📦 What is Unboxing in Java?
+Unboxing is when Java automatically converts a wrapper class object back into a primitive type
+
+Integer obj = 20;
+int num = obj;  // Unboxing: Integer → int
+
+
+
+📋 Why is this useful?
+Before Java 5, you had to manually convert between primitives and objects, especially when using collections like ArrayList (which only work with objects).
+like 
+import java.util.*;
+
+public class AutoUnboxDemo {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+
+        list.add(100);       // Autoboxing: int → Integer
+        int value = list.get(0);  // Unboxing: Integer → int
+
+        System.out.println("Value: " + value);
+    }
+}
+
+
+
+Autoboxing and unboxing make your code cleaner and easier.

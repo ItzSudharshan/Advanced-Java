@@ -1,0 +1,8 @@
+📦 What is Autoboxing in Java?
+Autoboxing is when Java automatically converts a primitive data type into its corresponding wrapper class object.
+
+✅ Example:
+int num = 10;
+Integer obj = num;  // Autoboxing: int → Integer
+
+
