@@ -1,0 +1,24 @@
+Understanding Serialization
+Serialization is the process of converting a Java object into a series of bytes to store or transmit it. This process is essential for saving the state of an object, sharing it across networks, or temporarily storing it for later use
+-----------
+How Serialization Works
+
+To serialize an object in Java:
+The class must implement the Serializable interface.
+An ObjectOutputStream can be used to write the object to a file or an output stream.
+The serialized object can later be deserialized to recreate the original state
+Explanation:
+The User class implements Serializable, allowing it to be serialized.
+An ObjectOutputStream writes the User object as a byte stream to user.ser
+------------------
+
+Deserialization is the process of converting a byte stream back into a Java object. It restores an object’s state from a serialized form, allowing applications to reload previously saved data.
+------------------
+How Deserialization Works
+
+To deserialize an object:
+
+The class must implement Serializable.
+
+An ObjectInputStream can be used to read the byte stream and convert it back to the original object.
+---------------------
