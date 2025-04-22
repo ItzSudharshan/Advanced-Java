@@ -1,0 +1,19 @@
+What are Annotations?
+Annotations in Java are a type of metadata that you add to your code. They provide information about the code to the compiler or runtime environment without affecting the program's logic or behavior. Annotations are widely used in Java frameworks, tools, and libraries, enhancing readability and enabling powerful capabilities like dependency injection, code analysis, and runtime processing.
+-----------------
+Examples of Common Annotations:
+
+@Override: Used to indicate that a method is overriding a method in its superclass.
+
+@Deprecated: Marks a method or class as outdated, warning developers to avoid using it.
+
+@SuppressWarnings: Instructs the compiler to ignore specific warnings, allowing more control over code quality.
+---------------
+Benefits of Using Annotations
+
+Simplify Code: Annotations eliminate the need for verbose configurations, reducing boilerplate code. For example, rather than defining all dependency mappings manually in configuration files, annotations like @Autowired (in Spring) handle this automatically.
+
+Reduce Boilerplate Code: Annotations replace repetitive code and XML configurations, resulting in cleaner and more maintainable code.
+
+Enhance Readability: Annotated code is often easier to understand at a glance because annotations serve as clear labels or markers about the behavior or purpose of code segment
+----------------
