@@ -1,0 +1,12 @@
+Stored Procedure ?
+A Stored Procedure is  a Group of One or More Sql Statements or Procedural Statements compiled into a Single Unit. This unit is Stored in the Database and can be executed by calling its name 
+-------------
+Benifits of Stored Procedure 
+1) Reusablity -> Define it Once and U can use it Multiple Times
+2) Maintainability -> Easier to Make Changes
+3) Performance -> Reduce Network Traffic Between Application and Database 
+4) Security -> Restricts user access to data by giving access to Stored Procedure instead of Tables 
+---------------
+What is CallableStatement?
+A CallableStatement is a part of the JDBC (Java Database Connectivity) API that allows Java applications to interact with stored procedures in a database. 
+--------------

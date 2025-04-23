@@ -1,0 +1,30 @@
+Stored procedure for Inserting the Values 
+
+
+USE student_dynamicCrud;
+SHOW TABLES;
+
+CREATE TABLE Student_Info(
+Student_name varchar(50),
+Roll_no int,
+Branch_Name varchar(50),
+Student_Age int
+);
+
+
+SELECT * FROM Student_Info;
+
+CREATE PROCEDURE InsertVal(
+    IN Name VARCHAR(50),
+    IN RollNo INT,
+    IN BranchName VARCHAR(50),
+    IN Age INT
+)
+BEGIN
+    INSERT INTO Student_Info(Student_name, Roll_no, Branch_Name, Student_Age)
+    VALUES (Name, RollNo, BranchName, Age);
+    
+    SELECT 'INSERTED SUCCESSFULLY';
+END $
+
+DELIMITER ;

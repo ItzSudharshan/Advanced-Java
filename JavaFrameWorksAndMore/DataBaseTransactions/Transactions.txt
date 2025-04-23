@@ -1,0 +1,21 @@
+What Are Database Transactions?
+A database transaction is a group of actions that must all be completed together. If one action fails, the whole transaction is canceled to keep the data safe.
+--------------
+The Four Pillars: ACID Properties
+Just like a strong building needs a solid foundation, transactions rely on ACID properties. Let’s break these down:
+
+Atomicity: All or nothing. Just like you want your full meal or no meal at all, a transaction must be fully completed or not done at all.
+
+Consistency: The database always stays correct. If you add or remove dishes, your Swiggy cart should always show the right total.
+
+Isolation: One transaction shouldn’t interfere with another. Imagine you and a friend are both using the app to add dishes to the same order—you don’t want their choices to mess up what you’re adding!
+
+Durability: Once it’s done, it’s done! After you confirm your Swiggy order, it’s locked in—even if the internet cuts out, the order still shows up.
+---------------
+Why Are Transactions Important?
+Data Integrity: Transactions make sure that all steps in a group of operations are completed correctly. If one step fails, the whole process is rolled back, leaving no incomplete data.
+
+Preventing Errors: Imagine making a bank transfer where the money leaves your account but doesn’t reach the other person. Transactions make sure such mistakes don’t happen.
+
+Smooth User Experience: Just like placing a Swiggy order, a good transaction makes everything easy and worry-free. You don’t have to stress about one dish missing from your big order—it’s all or nothing!
+-----------------
