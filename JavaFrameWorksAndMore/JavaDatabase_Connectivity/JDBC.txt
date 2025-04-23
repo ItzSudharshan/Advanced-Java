@@ -67,3 +67,4 @@ By Deafult AutoCommit is True . U can set it to false for manual Transactions
 Batch Processing 
 
 Usd to execute Multiple queries using addBatch() and executeBatch()
+---------------------
