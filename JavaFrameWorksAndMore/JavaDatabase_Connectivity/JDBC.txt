@@ -32,3 +32,38 @@ This driver uses a middle-tier server to translate JDBC calls. It’s a bit like
 Type 4: Thin Driver
 This is the most popular driver today. It’s called a 'thin' driver because it doesn’t need any extra software—just Java and your database. It directly converts JDBC calls to something the database can understand, making it fast and easy. Think of it as a universal charger—simple and effective. If you’re just starting out, this is the one you’ll likely use. It's like a Swiss army knife—it gets the job done without any fuss!
 --------------------------------
+
+What are Some JDBC Components ?
+DriverManager 
+Driver 
+Connection 
+Statement 
+Resulset
+
+--------------------------
+Statement Vs Prepared  Statement
+
+Statement -> Static and Less Secure
+Prepared Statement -> Precompiled , Safer and Faster 
+
+--------------------------
+execute()  VS executeQuery() VS exceuteUpdate()
+
+execute() -> Any SQL
+executeQuery -> SELECT 
+exceuteUpdate - INSERT/UPDATE/DELETE 
+
+-------------------------
+What is Resulset?
+
+Its used for Storing the Results 
+
+----------------------
+AutoCommit 
+
+By Deafult AutoCommit is True . U can set it to false for manual Transactions 
+
+----------------------
+Batch Processing 
+
+Usd to execute Multiple queries using addBatch() and executeBatch()
