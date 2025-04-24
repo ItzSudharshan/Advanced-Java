@@ -1,0 +1,135 @@
+What are Annotations ?
+Annotations in Hibernate: Special markers in your Java code that define how your classes relate to database tables and manage relationships between entities
+-----------------
+.@Entity: Marks a Class as a Persistent Entity
+What It Does: This annotation tells Hibernate that the class is an entity, meaning it should be mapped to a table in your database.
+
+Example:
+
+@Entity
+public class Volunteer {
+    // Class fields and methods
+}
+Explanation: Imagine you’re creating a record book for all volunteers. Marking a class with @Entity tells Hibernate, "This class represents something I need to store in the database."
+----------------------------------------
+. @Id: Marks the Primary Key Field
+What It Does: The @Id annotation is used to mark the primary key field of an entity. This is the unique identifier for each record.
+
+Example:
+
+@Id 
+private int id;
+Explanation: In our volunteer record, the @Id represents the volunteer ID, which must be unique for every volunteer. It’s like a membership number that identifies each volunteer uniquely.
+-----------------------------------
+3. @GeneratedValue: Defines the Primary Key Generation Strategy
+What It Does: The @GeneratedValue annotation is used to tell Hibernate how to generate the value for the primary key—like auto-incrementing IDs.
+
+Example:
+
+@Id 
+@GeneratedValue(strategy = GenerationType.AUTO) 
+private int id;
+Explanation: This tells Hibernate, "Automatically assign a new ID for each new volunteer," just like giving each new member a new ID badge.
+-----------------------------------
+
+learn
+completed
+Annotations in Hibernate
+Imagine you’re organizing a group of volunteers for an event. You need to keep track of each volunteer's details—like their name, contact information, and what task they’re assigned to. You also need to understand the relationships between different volunteers and tasks, like who is leading the team or who’s working on which specific task.
+
+Annotations in Hibernate help you do exactly that in your Java applications. Instead of manually writing complex SQL statements to create and manage tables and relationships, Hibernate's annotations make everything simpler. By using these annotations, you can define how your classes relate to database tables, and how different entities are linked together—all within your Java code.
+
+In this guide, we’ll learn about the core annotations used for CRUD operations and relationship mapping in Hibernate. Let’s break them down, one by one.
+
+Core Annotations for CRUD Operations
+CRUD operations (Create, Read, Update, Delete) are at the heart of working with databases. Hibernate offers a set of core annotations that make these operations very straightforward. Let’s explore them:
+
+1. @Entity: Marks a Class as a Persistent Entity
+What It Does: This annotation tells Hibernate that the class is an entity, meaning it should be mapped to a table in your database.
+
+Example:
+
+@Entity
+public class Volunteer {
+    // Class fields and methods
+}
+Explanation: Imagine you’re creating a record book for all volunteers. Marking a class with @Entity tells Hibernate, "This class represents something I need to store in the database."
+
+2. @Id: Marks the Primary Key Field
+What It Does: The @Id annotation is used to mark the primary key field of an entity. This is the unique identifier for each record.
+
+Example:
+
+@Id 
+private int id;
+Explanation: In our volunteer record, the @Id represents the volunteer ID, which must be unique for every volunteer. It’s like a membership number that identifies each volunteer uniquely.
+
+3. @GeneratedValue: Defines the Primary Key Generation Strategy
+What It Does: The @GeneratedValue annotation is used to tell Hibernate how to generate the value for the primary key—like auto-incrementing IDs.
+
+Example:
+
+@Id 
+@GeneratedValue(strategy = GenerationType.AUTO) 
+private int id;
+Explanation: This tells Hibernate, "Automatically assign a new ID for each new volunteer," just like giving each new member a new ID badge.
+
+4. @Column: Maps a Field to a Specific Column in the Database
+What It Does: The @Column annotation is used to map a specific field in the class to a column in the database table. You can also customize column details like the name, length, and more.
+
+Example:
+
+@Column(name = "volunteer_name", length = 100) 
+private String name;
+Explanation: Here, @Column maps the name field to the volunteer_name column in the database. It’s like specifying where a volunteer's name should be written down in the record book
+-------------------------------
+Annotations for Relationship mapping
+. @OneToOne: Maps a One-to-One Relationship
+What It Does: The @OneToOne annotation is used to create a one-to-one relationship between two entities.
+
+Example:
+
+@OneToOne 
+private Task assignedTask;
+Explanation: This indicates that each volunteer can have one assigned task, and each task is assigned to only one volunteer. It’s like saying, "Each person has exactly one assigned responsibility."
+
+2. @OneToMany and @ManyToOne: Maps One-to-Many and Many-to-One Relationships
+@OneToMany: Used to map a one-to-many relationship. For example, a team leader can have multiple volunteers working under them.
+
+@OneToMany(mappedBy = "teamLeader") 
+private List<Volunteer> volunteers;
+Explanation: This tells Hibernate that one team leader has many volunteers working under them—just like having one leader for multiple team members.
+
+@ManyToOne: Used to map the many-to-one relationship, often from the perspective of the entity on the "many" side.
+
+@ManyToOne 
+private TeamLeader teamLeader;
+Explanation: This tells Hibernate that many volunteers report to one team leader. It’s like multiple volunteers reporting to a single supervisor.
+
+3. @ManyToMany: Maps a Many-to-Many Relationship
+What It Does: The @ManyToMany annotation is used to define relationships where many entities are related to many other entities.
+
+Example:
+
+@ManyToMany @JoinTable(name = "volunteer_task",    
+                       joinColumns = @JoinColumn(name = "volunteer_id"), 
+                       inverseJoinColumns = @JoinColumn(name = "task_id")
+) 
+private List<Task> tasks;
+Explanation: In this case, each volunteer can work on multiple tasks, and each task can have multiple volunteers working on it. It’s like a big project where multiple people are involved in several overlapping activities.
+-------------------
+Summary of Hibernate Annotations
+@Entity: Marks a class as a persistent entity.
+
+@Id: Defines the primary key for an entity.
+
+@GeneratedValue: Manages how primary key values are generated.
+
+@Column: Maps a field to a specific database column.
+
+@OneToOne: Establishes a one-to-one relationship between entities.
+
+@OneToMany / @ManyToOne: Maps one-to-many and many-to-one relationships.
+
+@ManyToMany: Maps many-to-many relationships between entities.
+--------------------
