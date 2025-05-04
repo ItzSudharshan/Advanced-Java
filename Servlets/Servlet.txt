@@ -1,0 +1,29 @@
+Definitions
+Java Servlets are Java programs that run on a web server. They process requests from clients (like web browsers) and provide the correct response, making web applications dynamic and interactive.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Servlet Hierarchy
+Servlets follow a hierarchy and implement certain interfaces that define their lifecycle—like init(), service(), and destroy(). Here’s the structure:
+
+
+Servlet Interface: This defines the basic methods all servlets must have.
+
+GenericServlet: Provides a general implementation, not tied to any specific protocol.
+
+HttpServlet: Extends GenericServlet to make it easy to handle HTTP services like GET and POST
+---------------------------------------------------------------------------------------------------------------------------------------------------
+What lifecycle methods do servlets implement?
+init()
+service()
+destroy()
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Handling HTTP Requests in Servlets
+The service() Method in Servlets
+The service() method is the entry point for handling all kinds of HTTP requests that arrive at the servlet. Imagine this method as the chaiwala who knows if the request is for ginger tea or masala chai and takes action accordingly. In the context of servlets:
+
+GET Request: Like a customer asking for the menu. They just want to see information.
+
+POST Request: Like giving your order and details. You send data to be processed.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Summary
+Java Servlets make managing HTTP requests straightforward. By using the service() method, a servlet can intelligently handle different request types, much like a good chaiwala handling different tea orders. In this example, we saw how a simple "Hello World" response can be served using the service() method and PrintWriter to generate the HTML output.
+--------------------------------------------------------------------------------------------------------------------------------------------------

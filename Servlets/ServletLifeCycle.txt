@@ -1,0 +1,54 @@
+Jervlet Lifecycle Methods
+A Java Servlet passes through a set of defined stages—called its lifecycle. These stages are controlled by three key methods: init(), service(), and destroy(). Each method has a specific role to play, just like our chef, and they determine what the servlet does during its life.
+---------------------------------------------------------------------------------------------------------------------------------------------
+1) init() Method - Preparing Ingredients
+The init() method is  only once when the servlet is first loaded into the server's memory. When a servlet container (like Apache Tomcat) starts and the servlet is requested for the first time, the init() method is called to initialize the servlet. This is where the servlet sets up resources like database connections or any other initial configurations.
+@Override
+public void init() throws ServletException {
+    // Initialization code here
+    System.out.println("Servlet is being initialized...");
+}
+---------------------------------------------------------------------------------------------------------------------------------------------
+2)  service() Method - Cooking the Dish
+The service() method After initialization, each time a request comes in, the service() method is called. This is where the main logic resides—it processes incoming requests and sends back responses.
+
+When is it called?
+
+It's called every time the servlet receives a request.
+
+Example:
+
+If a client makes a request to get user data or submit a form, the service() method will handle it
+Override
+public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    out.println("<h1>Welcome! This is the response from the servlet.</h1>");
+    System.out.println("Processing request...");
+}
+---------------------------------------------------------------------------------------------------------------------------------------------
+3) destroy() Method - Cleaning Up
+The destroy() method is like the chef cleaning up the workstation at the end of the day. Once the servlet has served its purpose and the server no longer needs it, the destroy() method is called to release any resources (like closing database connections or releasing file handles).
+Example:
+
+You can use destroy() to close a database connection to avoid memory leaks.
+
+@Override
+public void destroy() {
+    // Cleanup code here
+    System.out.println("Servlet is being destroyed...");
+}
+Key Points:
+
+It is called only once, when the servlet is no longer needed.
+
+It is used to release resources like closing connections
+---------------------------------------------------------------------------------------------------------------------------------------------
+Servlet Lifecycle - When and How Often?
+init(): Called once, when the servlet is loaded for the first time.
+
+service(): Called every time a request is received, handling multiple requests.
+
+destroy(): Called once, when the servlet is taken out of service.
+
+

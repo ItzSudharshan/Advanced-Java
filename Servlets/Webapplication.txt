@@ -1,0 +1,18 @@
+Web Application: An online service accessible via a browser without needing to install any software. It allows activities like ordering food, booking tickets, or chatting with friends, all happening online
+--------------------------------------------------------------------------------------------------------------------------------------------
+Components of a Web Application
+A web application has three main parts, much like preparing a dosa involves ingredients, a stove, and the cook:
+
+Client-side (Front-end): This is the part you interact with—the user interface built with HTML, CSS, and JavaScript. Imagine this as the delicious dosa served on your plate—it’s what you see and interact with.
+
+Server-side (Back-end): The back-end is where all the magic happens behind the scenes—it handles logic and data processing. Think of it as the cook making the dosa, handling the complicated tasks. Technologies like Java, Python, and Node.js do this job here.
+
+Database: This is where all the ingredients are stored—like batter, spices, and veggies kept ready for cooking. Databases like MySQL, PostgreSQL, or MongoDB store information such as user details, orders, or messages.
+------------------------------------------------------------------------------------------------------------------------------------------------
+Types of Web Applications:
+There are two main types of web applications: Static and Dynamic.
+
+Static Web Applications: Think of a billboard that displays the same content to everyone all the time. A static web application is just like that—its content is fixed, and doesn't change. A company website showing contact information, for instance, is a static web app—you can read the information, but there’s nothing more to do.
+
+Dynamic Web Applications: Now picture a lively vegetable market, where each customer gets a unique set of vegetables based on their request. A dynamic web application works similarly—its content changes depending on the user. Shopping websites, social media platforms, and online banking are dynamic web applications that deliver personalized experiences, involving more complex processing
+------------------------------------------------------------------------------------------------------------------------------------------------
